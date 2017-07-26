@@ -1,0 +1,15 @@
+
+set vsvim_useeditordefaults
+
+nmap <C-O> :vsc View.NavigateBackward<CR>
+nmap <C-I> :vsc View.NavigateForward<CR>
+
+" Remap VIM 0 to first non-blank character
+map 0 ^
+
+" Better CTRL-F/B paging behaviour
+nmap <C-f> :vsc Edit.ScrollPageDown<CR>M
+nmap <C-b> :vsc Edit.ScrollPageUp<CR>M
+
+
+
