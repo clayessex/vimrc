@@ -11,5 +11,6 @@ map 0 ^
 nmap <C-f> :vsc Edit.ScrollPageDown<CR>M
 nmap <C-b> :vsc Edit.ScrollPageUp<CR>M
 
-
+" Prevent CTRL-Click from performing Go-To-Definition
+noremap <C-LeftMouse> <Nop>
 
