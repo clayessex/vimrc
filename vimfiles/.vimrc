@@ -20,7 +20,7 @@ set tags=tags
 set softtabstop=4               " when hitting <BS>, pretend like a tab is removed, even if spaces
 set shiftwidth=4                " number of spaces to use for autoindenting
 set shiftround                  " use multiple of shiftwidth when indenting with '<' and '>'
-set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+"set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 set autoindent                  " always set autoindenting on
 set copyindent                  " copy the previous indentation on autoindenting
 set number                      " always show line numbers
@@ -38,6 +38,14 @@ set mouse=a
 "autocmd VIMEnter * :source $HOME/vimfiles/session.vim
 "autocmd VIMLeave * :mksession! $HOME/vimfiles/session.vim
 "set lines=60 columns=120
+
+
+" CTRL-backspace delete previous word
+" Note: if using putty, check Terminal->Keyborad options and make sure that
+" Backspace is set to CTRL-H.
+set backspace=indent,eol,start  " allow backspacing over everything in insert mode
+inoremap ^? <C-W>
+nnoremap ^? a<C-W><esc>
 
 
 " Insert the current date at the top of the file
