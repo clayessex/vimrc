@@ -47,6 +47,13 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 inoremap ^? <C-W>
 nnoremap ^? a<C-W><esc>
 
+" Search down into subfolders
+" Provides tab-completion for all file-releated tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
 
 " Insert the current date at the top of the file
 nmap <leader>N ggi# <C-R>=strftime("%Y-%m-%d - %A")<CR><CR><CR><ESC>
